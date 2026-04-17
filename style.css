@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double+Ink:wght@100..900&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Bitcount Grid Double Ink', sans-serif;
+
+}
+
+body *{
+    box-sizing: border-box;
+}
+
+.main-login {
+    width: 100vw;
+    height: 100vh;
+    background: #201b2c;
+    display: flex; /* FLEX --- FICA LADO A LADO NO SITE*/
+    justify-content: center; /* CENTRALIZA AS COISAS NO EIXO X */
+    align-items: center; /* CENTRALIZA AS COISAS NO EIXO y */
+}
+
+.left-login {
+    width: 50vw;
+    height: 100vh; /* VH pega a tela em que esta a pagina e usa a porcentagem daquilo */
+    display: flex;
+    justify-content: center; /* Centraliza verticalmente */
+    align-items: center; /* Centraliza horizontalmente */
+    flex-direction: column; /* Os titulo ficam um embaixo do outro */
+}
+
+.left-login > h1 {
+    font-size: 3vw;
+    color: #00ff88;
+    text-align: center;
+}
+
+.left-login-image{
+    width: 35vw;
+    height: auto;
+    display: block;
+}
+
+.right-login {
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-login {
+    width: 400px; /*e a % pega o tamanho da div que esta o card login na right login que tem 50vh */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 40px 250px; /*x e y */
+    background: #2f2841;
+    border-radius: 20px;
+    box-shadow: 0px 10px 40px #00000056; /*o primeiro valor `e o X (coloquei 0 pra ficar no centro) / y vai pra cima ou para baixo, entao coloquei pra baixo com 10px (-10px iria pra cima) / blurr / cor   */    
+
+}
+
+.card-login > h1 {
+    color: #00ff88;
+    font-weight: 800; /* GROSSURA DA FONTA */
+    margin: 0;
+}
+
+.textfield {
+    display: flex;
+    flex-direction: column; /*quando usase o flexdirection o eixo y se usa o justify-content e o x é o aling-itens*/
+    align-items: flex-start;
+    justify-content: center;
+    margin: 10px;/* primeiro valor é eixo y e o segundo valor é o x (10px (y) 20px (x) */
+}
+
+.textfield > input {
+    width: auto;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    background: #513869;
+    color: #f0ffffde;
+    font-size: 12pt;
+    box-shadow: 0px 10px 40px  #00000056;
+    outline: none; /* Tira a caixinha em volta, tipo borda */
+    box-sizing: border-box;
+}
+
+.textfield > label {
+    color: #f0ffffde;
+    margin-bottom: 10px;
+}
+
+.textfield > input::placeholder {
+    color: #f0ffff94;
+
+}
+
+.btn-login {
+    width: 100px;
+    padding: 16px 0px;
+    margin: 25px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    text-transform: uppercase; /* Transformar tudo em Maiusculo */
+    font-weight: 800;
+    letter-spacing: 2.5px;
+    color: #2b134b;
+    background: #00ff88;
+    box-shadow: 0px 10px 40px #00ff8052;
+
+}
+
+/*SERVE PARA AJUDAR NA RESPONSATIVIDADE DO SITE*/
+
+@media only screen and (max-width: 950px) {
+    .card-login {
+        width: 85%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .main-login {
+        flex-direction: column;
+    }
+    .left-login > h1 {
+        display: none; /*Oculta as coisas do html*/
+    }
+
+    .left-login{
+        width: 100%;
+        height: auto;
+
+    }
+
+    .right-login {
+        width: 100%;
+        height: auto;
+    }
+
+    .left-login-image {
+        width: 50vw;
+
+    }
+
+    .card-login {
+        width: 90%;
+    }
+}
